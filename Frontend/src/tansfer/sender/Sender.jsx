@@ -14,7 +14,7 @@ import { socket } from "../../socket";
 import { createPeerConnection, sendFile, sendText } from "../../webrtc";
 import { generateKey, exportKeyHex } from "../../crypto";
 
-const CODE_TTL = 120; // seconds
+const CODE_TTL = 600; // seconds — must match CODE_TTL_MS in server.js (currently 10 min)
 
 export default function Sender() {
   // ── State ──────────────────────────────────────────────────────────────────
