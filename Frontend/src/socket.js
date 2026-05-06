@@ -11,7 +11,7 @@ export const socket = io(SOCKET_URL, {
   reconnection: true,
   reconnectionAttempts: 5,
   reconnectionDelay: 1000,
-  transports: ["websocket", "polling"], // websocket first, polling fallback
+  transports: ["polling", "websocket"], // polling first, websocket upgrade
 });
 
 socket.on("connect", () => console.log("[Socket] Connected:", socket.id));

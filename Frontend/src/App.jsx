@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sender from "./tansfer/sender/Sender";
+import Sender from "./tansfer/sender/sender";
 import Receiver from "./tansfer/receiver/Receiver";
 import "./App.css";
 
@@ -21,8 +21,15 @@ export default function App() {
 
           {/* Feature pills */}
           <div className="feature-pills">
-            {["🔒 AES-256", "⚡ WebRTC P2P", "💾 No Storage", "⏱ 2-min Expiry"].map((f) => (
-              <span key={f} className="pill">{f}</span>
+            {[
+              "🔒 AES-256",
+              "⚡ WebRTC P2P",
+              "💾 No Storage",
+              "⏱ 2-min Expiry",
+            ].map((f) => (
+              <span key={f} className="pill">
+                {f}
+              </span>
             ))}
           </div>
         </div>
@@ -54,7 +61,8 @@ export default function App() {
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="app-footer">
         <p>
-          All transfers are direct peer-to-peer. No data ever touches our servers.
+          All transfers are direct peer-to-peer. No data ever touches our
+          servers.
         </p>
       </footer>
     </div>
